@@ -1,0 +1,14 @@
+applications:
+- path: mendixBoilerplate.war
+  memory: 512M
+  instances: 1
+  domain: mybluemix.net
+  name: IBMRapdiAppDemo
+  host: IBMRapdiAppDemo
+  disk_quota: 1024M
+  services:
+  - IBMRapdiAppDemo-cleardb
+  env:
+    ADMIN_PASSWORD: '2'
+    DEVELOPMENT_MODE: 'true'
+  buildpack: https://github.com/mendix/cf-mendix-buildpack
